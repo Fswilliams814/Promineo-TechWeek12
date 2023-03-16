@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Coding Assignment</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="bg-image clearfix" style="background-image: url(Fitness\ Zoom\ Virtual\ Background.jpg); height: 200vh; text-align: center;">
+    
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary text-white">
+        <div class="col text-center">New Customer Information</div> <!--added div here to center the text using the col class - when i googled it they told me to use the "container-fluid-nav class but that only pushed it over a little it did not center the words"-->
+      </nav><br>
+
+
+      <div class="container col-sm-6" style="color: aliceblue;">
+      <div>
+        <form class="form-inline" role="form" id="createForm" onsubmit="return false;">
+        <div class="form-group">
+           <label for="name">Full Name:</label><br>
+           <input class="form-control form-control-sm" type="text" id="name" placeholder="Enter name"/>
+           </div><br>
+           <div class="form-group">
+            <label for="number">Phone Number:</label><br>
+            <input class="form-control form-control-sm" type="text" id="number" placeholder="Enter phone number"/>
+            </div><br>
+           <div class="form-group">
+           <label for="products">Choose Your Target Area</label><br>
+           <select class="form-control form-control-sm" id="improvementArea" name="updateImprovementArea">
+            <option value="Area of Improvement">---</option>
+            <option value="Fitness and Weightloss">Fitness & Weightloss</option>
+            <option value="Stress and Anxiety">Stress and Anxiety</option>
+            <option value="Sleep and Relaxation">Sleep & Relaxation</option>
+            <option value="Whole Body Health">Whole Body Health</option>
+            <option value="Immunity">Immunity</option>
+            <option value="Comfort and Relief">Comfort & Relief</option>
+            <option value="Gut Health and Detox">Gut Health & Detox</option>
+            <option value="Energy and Focus">Energy and Focus</option>
+            <option value="Pet Care">Pet Care</option>
+            <option value="Hair Skin Nails">Hair, Skin, and Nails</option>
+         </select>
+           </div><br>
+           <input class="btn btn-primary" type="submit" onclick="addCustomer" id="createButton"/><br>
+         </div>
+           </form>
+           </div>
+        </div><br>
+          
+            <nav class="navbar navbar-expand-md navbar-dark bg-secondary text-white">
+            <div class="col text-center">Update Customer Information</div> <!--added div here to center the text using the col class - when i googled it they told me to use the "container-fluid-nav class but that only pushed it over a little it did not center the words"-->
+            </nav><br>
+          
+    
+        <div class="container col-sm-6" style="color: aliceblue;">
+        <div>
+        <form class="form-inline" role="form" id="updateForm" onsubmit="return false;">
+        <div class="form-group">
+           <label for="name">Full Name:</label><br>
+           <input class="form-control form-control-sm" type="text" id="customerNameToUpdate" placeholder="Enter name"/>
+           </div><br>
+           <div class="form-group">
+            <label for="number">Phone Number:</label><br>
+            <input class="form-control form-control-sm" type="text" id="updateNumber" placeholder="Enter phone number"/>
+            </div><br>
+           <div class="form-group">
+           <label for="products">Choose Your Target Area</label><br>
+           <select class="form-control form-control-sm" id="updateImprovementArea" name="updateImprovementArea">
+            <option value="Area of Improvement">---</option>
+            <option value="Fitness and Weightloss">Fitness & Weightloss</option>
+            <option value="Stress and Anxiety">Stress and Anxiety</option>
+            <option value="Sleep and Relaxation">Sleep & Relaxation</option>
+            <option value="Whole Body Health">Whole Body Health</option>
+            <option value="Immunity">Immunity</option>
+            <option value="Comfort and Relief">Comfort & Relief</option>
+            <option value="Gut Health and Detox">Gut Health & Detox</option>
+            <option value="Energy and Focus">Energy and Focus</option>
+            <option value="Pet Care">Pet Care</option>
+            <option value="Hair Skin Nails">Hair, Skin, and Nails</option>
+         </select>
+           </div><br>
+           <input class="btn btn-primary" type="submit" onclick="updateCustomer" id="updateCustomerButton"/><br>
+         </div>
+        </form>
+    </div>
+</div>
+<br>
+           <nav class="navbar navbar-expand-md navbar-dark bg-secondary text-white">
+            <div class="col text-center">Delete Customer</div> <!--added div here to center the text using the col class - when i googled it they told me to use the "container-fluid-nav class but that only pushed it over a little it did not center the words"-->
+          </nav><br>
+
+    
+        <div class="container col-sm-6" style="color: aliceblue;">
+        <div>
+        <form class="form-inline" role="form" id="deleteForm" onsubmit="return false;">
+        <div class="form-group">
+           <label for="name">Full Name:</label><br>
+           <input class="form-control form-control-sm" type="text" id="deleteName" placeholder="Enter name"/>
+           </div><br>
+           <input class="btn btn-primary" type="submit" onclick="deleteCustomer" id="deleteCustomerButton"/><br>
+         </div>
+           </form>
+        </div>
+      </div>
+
+      <div id="prospectList" class="popup" onclick="viewProspectList">Click Here to View Prospect List
+        <span class="popuptext" id="myPopup" onclick="openPopup"></span>
+      </div>
+   
+   
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="finalproject.js"></script>
+</body>
+</html>

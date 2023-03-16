@@ -1,0 +1,23 @@
+{
+  "name": "week-12assignment",
+  "version": "1.0.0",
+  "description": "wk 12 project crud app",
+  "main": "finalproject.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fswilliams814/Promineo-TechWeek12.git"
+  },
+  "author": "Fionna Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fswilliams814/Promineo-TechWeek12/issues"
+  },
+  "homepage": "https://github.com/Fswilliams814/Promineo-TechWeek12#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4"
+  }
+}
